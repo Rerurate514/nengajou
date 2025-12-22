@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F6EFE2;
+    font-family: "Yuji Syuku", serif;
+}
+
+.nenga-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.nenga-card {
+    border: 1px solid #ccc;
+    width: 25rem;
+    height: 37rem;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.nenga-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kitte-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kitte {
+    width: 4rem;
+    margin: 1rem 0 0 1rem;
+}
+
+.nenga-stamp {
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.yuubin-bango-container {
+    display: flex;
+    margin: 1.5rem 1.5rem 0 0;
+}
+
+.y-bango {
+    width: 1.5rem;
+    height: 2.5rem;
+    margin: 0.1em;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.5rem;
+    font-family: "OCR-B", "Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #1d409b;
+}
+
+.yuubin-bango-top { border: 1px solid #ff7b7b; }
+.yuubin-bango-bottom { border: 1px solid #ff7b7b; }
+
+.nenga-body {
+    padding: 5rem 2rem;
+    height: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    writing-mode: vertical-rl;
+    width: 100%;
+}
+
+.address-main {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-right: 1rem;
+    position: absolute;
+    top: 30%;
+
+}
+
+.name-main {
+    font-size: 2.5rem;
+    letter-spacing: 0.8rem;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.sama {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.sender-info {
+    writing-mode: vertical-rl;
+    position: absolute;
+    bottom: 7rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sender-address {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.sender-name {
+    font-size: 1.2rem;
+    letter-spacing: 2em;
+}
+
+.nenga-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
+    padding: 0.5rem 2rem;
+}
+
+.sender-zip-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.s-zip {
+    width: 0.9rem;
+    height: 1.3rem;
+    border: 1px dashed #ff7b7b;
+    margin-right: 0.1rem;
+    display: grid;
+    place-items: center;
+    font-size: 0.8rem;
+    color: #1d409b;
+}
+
+.otoshidama-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 0.5rem;
+}
+
+.otoshidama-logo {
+    width: 6rem;
+}
+
+.kumi, .number {
+    font-family: "OCR-B", monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1d409b;
+}
+
+/*裏面*/
+
+.back-illust {
+    width: 12rem;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.message-area {
+    writing-mode: vertical-rl;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gashi {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    margin-left: 2rem;
+}
+
+.soegaki {
+    font-size: 1.1rem;
+    line-height: 2.5;
+    margin-left: 1.5rem;
+}
+
+.nengo {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+@media print {
+    .nenga-card {
+        page-break-after: always;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 25rem;
+    height: 37rem;
+    perspective: 1000px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.nenga-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: absolute;
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+.back-content {
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
