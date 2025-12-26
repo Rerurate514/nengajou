@@ -247,7 +247,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 2rem;
     background-color: #fff;
     transform: rotateY(180deg);
@@ -260,4 +260,11 @@ body {
 
 .flip-card.is-flipped .flip-card-inner {
     transform: rotateY(180deg);
+}
+
+.illust-area {
+    img {
+        width: 100%;
+        border-radius: 4px;
+    }
 }
