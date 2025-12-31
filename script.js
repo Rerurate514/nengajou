@@ -32,11 +32,3 @@ window.addEventListener('pointerup', () => {
     isDragging = false;
     nengaCard.style.cursor = 'grab';
 });
-
-setInterval(() => {
-    cardInner.style.transform = `rotateX(${currentRotateX}deg) rotateY(${currentRotateY++}deg)`;
-}, 50)
-
-// setInterval(() => {
-//     cardInner.style.transform = `rotateX(${currentRotateX--}deg) rotateY(${currentRotateY}deg)`;
-// }, 500)
