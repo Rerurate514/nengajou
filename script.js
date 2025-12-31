@@ -6,14 +6,14 @@ let previousX, previousY;
 let currentRotateX = 0;
 let currentRotateY = 0;
 
-nengaCard.addEventListener('mousedown', (e) => {
+nengaCard.addEventListener('pointerdown', (e) => {
     isDragging = true;
     previousX = e.clientX;
     previousY = e.clientY;
     nengaCard.style.cursor = 'grabbing';
 });
 
-window.addEventListener('mousemove', (e) => {
+window.addEventListener('pointermove', (e) => {
     if (!isDragging) return;
 
     const deltaX = e.clientX - previousX;
@@ -28,7 +28,15 @@ window.addEventListener('mousemove', (e) => {
     cardInner.style.transform = `rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg)`;
 });
 
-window.addEventListener('mouseup', () => {
+window.addEventListener('pointerup', () => {
     isDragging = false;
     nengaCard.style.cursor = 'grab';
 });
+
+setInterval(() => {
+    cardInner.style.transform = `rotateX(${currentRotateX}deg) rotateY(${currentRotateY++}deg)`;
+}, 50)
+
+// setInterval(() => {
+//     cardInner.style.transform = `rotateX(${currentRotateX--}deg) rotateY(${currentRotateY}deg)`;
+// }, 500)
