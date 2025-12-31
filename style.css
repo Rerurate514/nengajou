@@ -11,6 +11,14 @@ body {
     font-family: "Yuji Syuku", serif;
 }
 
+.fragg {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 6rem;
+    font-size: 1.5em;
+}
+
 .nenga-container {
     width: 100%;
     height: 100%;
