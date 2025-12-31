@@ -285,8 +285,26 @@ body {
     div {
         position: absolute;
         z-index: 1;
-        width: 100%;
-        height: 100%;
+    }
+}
+
+.illust-text {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    width: 100%; 
+    height: 100%;
+
+    p {
+        font-family: "Great Vibes";
+        font-size: 32px;
+
+        background: linear-gradient(90deg, #ff0000, #ffff00 70%, #ffffff);
+        background: -webkit-linear-gradient(0deg, #ff0000, #ffff00 70%, #ffffff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 

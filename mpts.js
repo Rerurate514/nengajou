@@ -72,13 +72,4 @@ space.add({
     }
 });
 
-space.add((time, ftime) => {
-    form.fill("#fff").alignText("center");
-    form.textBox(space.innerBound, "Happy New Year", "middle", "...");
-});
-
 space.bindMouse().bindTouch().play();
-
-document.fonts.ready.then(function () {
-    form.ctx.font = '32px "Great Vibes"';
-});
