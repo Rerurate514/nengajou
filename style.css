@@ -205,6 +205,10 @@ body {
     margin-left: 2rem;
 }
 
+.gashi::first-letter {
+    color: rgb(255, 66, 66);
+}
+
 .soegaki {
     font-size: 1.1rem;
     line-height: 2.5;
